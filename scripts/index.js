@@ -1,3 +1,18 @@
-import { recipes } from "../recipes.js";
+import { recipes } from "./data.js";
+import Recipe from "./Recipe.js";
 
-recipes.forEach((data) => data)
+const main = document.querySelector("main");
+
+recipes.forEach((element) => {
+    const recipe = new Recipe(
+        element.id,
+        element.name,
+        element.servings,
+        element.ingredients,
+        element.time,
+        element.description,
+        element.appliance,
+        element.ustensils
+    );
+    recipe.createCard(main)
+});
