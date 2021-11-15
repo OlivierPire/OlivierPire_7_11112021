@@ -60,7 +60,6 @@ nav {
 }
 
 nav #select_container {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,30 +69,25 @@ nav #select_container {
 
 nav #select_container #select_ingredients {
   background: #3282F7;
-  max-height: 150px;
-  max-width: 250px;
 }
 
 nav #select_container #select_appareil {
   background: #68D9A4;
-  height: 50px;
-  width: 150px;
 }
 
 nav #select_container #select_ustensiles {
   background: #ED6454;
-  height: 50px;
-  width: 150px;
 }
 
 nav #select_container .select {
+  height: 50px;
+  width: 150px;
   color: white;
   margin-top: 20px;
   padding: 0px;
   padding-right: 7px;
   padding-left: 7px;
   border-radius: 5px;
-  max-width: 270px;
   margin-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,19 +111,43 @@ nav #select_container .fa-chevron-down {
   top: 18px;
 }
 
-nav #select_container ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 5px;
+nav #sub-1 {
+  display: none;
+  background-color: #3282F7;
+}
+
+nav #sub-2 {
+  display: none;
+  background-color: #68D9A4;
+}
+
+nav #sub-3 {
+  display: none;
+  background-color: #ED6454;
+}
+
+nav .submenu {
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  z-index: 1000;
+  border-radius: 0px 5px 5px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 10px;
+}
+
+nav .submenu .submenu_content {
+  text-decoration: none;
+  color: white;
 }
 
 main {
@@ -148,7 +166,7 @@ main {
 
 main .recipe_card {
   width: 380px;
-  height: 364px;
+  height: 380px;
   background-color: #E7E7E7;
   border-radius: 5px;
   margin-bottom: 60px;
@@ -218,7 +236,7 @@ main .recipe_card .description ul {
 main .recipe_card .description .instructions {
   font-size: 0.8em;
   margin: 0;
-  max-height: 100px;
+  max-height: 135px;
   text-overflow: ellipsis;
   white-space: normal;
   overflow: hidden;

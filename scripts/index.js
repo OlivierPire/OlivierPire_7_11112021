@@ -16,3 +16,4 @@ recipes.forEach((element) => {
     );
     recipe.createCard(main)
 });
+
