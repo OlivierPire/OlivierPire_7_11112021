@@ -77,6 +77,51 @@ export default class Recipe {
         const instructions = document.createElement("p");
         instructions.classList.add("instructions");
         instructions.textContent = this.description;
-        description.appendChild(instructions);
+        description.appendChild(instructions);      
     }
-}
+
+    recipeHasIngredient(word) {
+        return this.ingredients.some((ingredient)=>ingredient.ingredient.includes(word));
+    }
+
+    recipeHasAppliance(word) {
+        return this.appliance.includes(word)
+    }
+    
+    recipeHasUstensils(word) {
+        return this.ustensils.some((ustensils)=>ustensils.includes(word));
+    }
+
+    recipeHasAllTags(tags) {
+        let counter = 0;
+        counter += tags.ingredients.length + tags.appliances.length + tags.ustensils.length;
+        let counterRecipe = 0;
+
+        for(let i =0; i<tags.ingredients.length; i++) {
+            if(this.recipeHasIngredient(tags.ingredients[i])) {
+                counterRecipe++;
+            }
+        }
+
+        for(let i =0; i<tags.appliances.length; i++) {
+            if(this.recipeHasAppliance(tags.appliances[i])) {
+                counterRecipe++;
+            }
+        }
+
+        for(let i =0; i<tags.ustensils.length; i++) {
+            if(this.recipeHasUstensils(tags.ustensils[i])) {
+                counterRecipe++;
+            }
+        }
+
+        if(counterRecipe == counter) {
+            return true
+        } 
+        return false
+    }
+};
+
+
+
+
