@@ -20,14 +20,14 @@ export default class Search {
         let ingredientsArray = [];
                    
         main.innerHTML = "";
-        this.allRecipes.forEach((recipe) => {               
+        this.allRecipes.map((recipe) => {               
             if (recipe.recipeHasAllTags(this.tags) && this.searchByInput(word, recipe)) {
                 recipe.createCard(main);
                 appliancesArray.push(recipe.appliance);
-                recipe.ustensils.forEach((ustensil) => {
+                recipe.ustensils.map((ustensil) => {
                     ustensilsArray.push(ustensil)
                 }) 
-                recipe.ingredients.forEach((ingredient) => {
+                recipe.ingredients.map((ingredient) => {
                     ingredientsArray.push(ingredient.ingredient)
                 })
             }
