@@ -7,9 +7,8 @@ const inputUstensils = document.getElementById("select_ustensils_input");
 const submenu = document.querySelectorAll(".submenu");
 const main = document.querySelector("main");
 const tagsContainer = document.querySelector(".tags_container");
-
 export default class Search {
-    constructor(allRecipes) {
+        constructor(allRecipes) {
         this.tags = {appliances:[], ustensils:[], ingredients:[]};
         this.allRecipes = allRecipes;
     }
