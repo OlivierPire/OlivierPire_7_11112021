@@ -17,7 +17,7 @@ export default class Recipe {
 
     const image = document.createElement("img");
     image.classList.add("recipe_img");
-    image.src = "../images/cook.jpg";
+    image.src = "./images/cook.jpg";
     recipeCard.appendChild(image);
 
     const infos = document.createElement("div");
