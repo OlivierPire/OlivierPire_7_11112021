@@ -280,9 +280,39 @@ main {
 }
 
 @media screen and (max-width: 900px) {
-    main{
+    header {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
         .recipe_card {
             width: auto;
         }
     }   
+
+    nav {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #sub-1 {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #sub-2 {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #sub-3 {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .tags_container {
+        flex-wrap: wrap;
+    }
 }
