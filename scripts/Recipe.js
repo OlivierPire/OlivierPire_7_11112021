@@ -96,8 +96,7 @@ export default class Recipe {
 
   recipeHasAllTags(tags) {
     let counter = 0;
-    counter +=
-      tags.ingredients.length + tags.appliances.length + tags.ustensils.length;
+    counter += tags.ingredients.length + tags.appliances.length + tags.ustensils.length;
     let counterRecipe = 0;
 
     for (let i = 0; i < tags.ingredients.length; i++) {
