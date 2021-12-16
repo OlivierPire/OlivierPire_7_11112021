@@ -19,14 +19,14 @@ export default class Search {
         let ingredientsArray = [];
                    
         main.innerHTML = "";
-        this.allRecipes.map((recipe) => {               
+        this.allRecipes.forEach((recipe) => {               
             if (recipe.recipeHasAllTags(this.tags) && this.searchByInput(word, recipe)) {
                 recipe.createCard(main);
                 appliancesArray.push(recipe.appliance);
-                recipe.ustensils.map((ustensil) => {
+                recipe.ustensils.forEach((ustensil) => {
                     ustensilsArray.push(ustensil)
                 }) 
-                recipe.ingredients.map((ingredient) => {
+                recipe.ingredients.forEach((ingredient) => {
                     ingredientsArray.push(ingredient.ingredient)
                 })
             }
@@ -34,7 +34,7 @@ export default class Search {
 
         let uniqueAppliance = Array.from(new Set(appliancesArray));
         let uniqueIngredients = Array.from(new Set(ingredientsArray));
-        let uniqueUstensils = Array.from(new Set(ustensilsArray));    
+        let uniqueUstensils = Array.from(new Set(ustensilsArray));  
 
         this.displaySortedLists(word, uniqueAppliance, uniqueIngredients, uniqueUstensils)
 

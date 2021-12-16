@@ -28,4 +28,5 @@ searchBar.addEventListener("input", (e) => {
   search.filterRecipes(e.target.value);
 });
 
+// Menu déroulant
 dropdown();
